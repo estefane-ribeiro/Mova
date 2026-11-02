@@ -1,6 +1,7 @@
 import Experiencias from "./components/Experiencias";
 import Main from "./components/Main";
 import Modalidades from "./components/Modalidades";
+import Slide from "./components/Slide";
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
       <Main />
       <Modalidades />
       <Experiencias />
+      <Slide />
     </div>
   );
 };
