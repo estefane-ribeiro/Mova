@@ -42,33 +42,41 @@ const Modalidades = () => {
 
       <div className="grid grid-cols-[2fr_1fr] gap-4 sm:gap-8">
         <div className="col-span-full grid *:col-start-1 *:row-start-1">
-          <img
-            className="h-52 object-cover w-full rounded-xl"
-            src={danca1}
-            alt="Dança 1"
-          />
-          <span className="m-2 self-start justify-self-end uppercase text-white rounded-full bg-verde-950/60 px-4 py-2 text-sm/none">
-            Ruby
+          <div className="group relative overflow-hidden cursor-pointer rounded-xl">
+            <img
+              className="h-52 object-cover w-full rounded-xl transition-transform group-hover:scale-110"
+              src={danca1}
+              alt="Dança 1"
+            />
+          </div>
+
+          <span className="m-2 z-20 self-start justify-self-end uppercase text-white rounded-full bg-verde-950/60 px-4 py-2 text-sm/none">
+            Dança Moderna
+          </span>
+        </div>
+        <div className="group grid *:col-start-1 *:row-start-1">
+          <div className="group relative overflow-hidden cursor-pointer rounded-xl">
+            <img
+              className="size-full object-cover rounded-xl transition-transform group-hover:scale-110"
+              src={danca2}
+              alt="Dança 2"
+            />
+          </div>
+
+          <span className="m-2 z-20 self-start justify-self-end uppercase text-white rounded-full bg-verde-950/60 px-4 py-2 text-sm/none">
+            Clássica
           </span>
         </div>
         <div className="grid *:col-start-1 *:row-start-1">
-          <img
-            className="size-full object-cover rounded-xl"
-            src={danca2}
-            alt="Dança 2"
-          />
-          <span className="m-2 self-start justify-self-end uppercase text-white rounded-full bg-verde-950/60 px-4 py-2 text-sm/none">
-            Emerald
-          </span>
-        </div>
-        <div className="grid *:col-start-1 *:row-start-1">
-          <img
-            className="size-full object-cover rounded-xl"
-            src={danca3}
-            alt="dança 3"
-          />
-          <span className="m-2 self-start justify-self-end uppercase text-white rounded-full bg-verde-950/60 px-4 py-2 text-sm/none">
-            Saphire
+          <div className="group relative overflow-hidden cursor-pointer rounded-xl">
+            <img
+              className="size-full object-cover rounded-xl transition-transform group-hover:scale-110"
+              src={danca3}
+              alt="dança 3"
+            />
+          </div>
+          <span className="m-2 z-20 self-start justify-self-end uppercase text-white rounded-full bg-verde-950/60 px-4 py-2 text-sm/none">
+            Balé
           </span>
         </div>
       </div>
