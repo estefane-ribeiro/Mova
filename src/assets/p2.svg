@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160">
+  <g fill="#c8aee6">
+    <circle cx="85" cy="27" r="7"/>
+    <path d="M83 36 Q65 48 54 42 L20 30 Q42 29 65 36
+      L83 44 Q96 27 104 4 Q101 39 91 62
+      L80 85 Q94 75 112 72 L91 94
+      Q75 101 65 84 L55 62 Q48 49 30 54
+      Q54 49 70 58 Z"/>
+  </g>
+  <text x="160" y="119" text-anchor="middle"
+    fill="#c8aee6" font-size="48"
+    font-family="cursive" font-style="italic">MovArt</text>
+  <text x="160" y="148" text-anchor="middle"
+    fill="#c8aee6" font-size="14"
+    letter-spacing="7">ACADEMIA</text>
+</svg>

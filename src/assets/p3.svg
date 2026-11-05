@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160">
+  <path d="M95 55 Q165 -5 235 48"
+    fill="none" stroke="#c8aee6" stroke-width="2"/>
+  <text x="160" y="105" text-anchor="middle"
+    fill="#c8aee6" font-size="48"
+    font-family="cursive" font-style="italic">BellaDança</text>
+  <text x="160" y="137" text-anchor="middle"
+    fill="#c8aee6" font-size="14"
+    letter-spacing="6">MODA FITNESS</text>
+</svg>

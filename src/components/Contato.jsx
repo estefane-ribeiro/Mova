@@ -35,20 +35,20 @@ const Contato = () => {
         action=""
       >
         <div className="grid gap-1">
-          <label className="text-white" for="nome">
+          <label className="text-white" htmlFor="nome">
             Nome
           </label>
           <input className="input" id="nome" type="text" />
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
           <div className="grid gap-1">
-            <label className="text-white" for="email">
+            <label className="text-white" htmlFor="email">
               Email
             </label>
             <input className="input" id="email" type="email" />
           </div>
           <div className="grid gap-1">
-            <label className="text-white" for="telefone">
+            <label className="text-white" htmlFor="telefone">
               Telefone
             </label>
             <input
@@ -60,7 +60,7 @@ const Contato = () => {
           </div>
         </div>
         <div className="grid gap-1">
-          <label className="text-white" for="mensagem">
+          <label className="text-white" htmlFor="mensagem">
             Mensagem
           </label>
           <textarea
