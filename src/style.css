@@ -77,6 +77,9 @@
       0 1px 4px 1px rgba(var(--color-roxo-800), 0.25),
       inset 0px -1px 2px var(--color-roxo-800);
   }
+  .input {
+    @apply rounded-md border-2 border-roxo-800 bg-roxo-800 p-2 text-white focus:outline-none focus:ring-2 focus:ring-roxo-400 focus:border-roxo-900 placeholder:text-roxo-900;
+  }
   .radial-gradient {
     @apply bg-radial-[50%_100%_at_50%_0%] from-roxo-500 to-roxo-800;
   }
