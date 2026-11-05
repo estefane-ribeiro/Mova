@@ -89,7 +89,7 @@ const Slide = () => {
             muted
             loop
             playsInline
-            className={`absolute inset-0 w-full h-full object-cover rounded-2xl transition-opacity duration-[800ms] ease-in-out ${
+            className={`absolute inset-0 w-full h-full object-cover rounded-2xl transition-opacity duration-800 ease-in-out ${
               isTransitioning ? "opacity-100" : "opacity-100"
             }`}
             style={{
