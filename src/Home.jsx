@@ -1,3 +1,4 @@
+import Contato from "./components/Contato";
 import Experiencias from "./components/Experiencias";
 import Galeria from "./components/Galeria";
 import Main from "./components/Main";
@@ -12,6 +13,7 @@ const Home = () => {
       <Experiencias />
       <Slide />
       <Galeria />
+      <Contato />
     </div>
   );
 };
