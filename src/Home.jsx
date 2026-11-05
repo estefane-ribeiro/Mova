@@ -3,6 +3,7 @@ import Experiencias from "./components/Experiencias";
 import Galeria from "./components/Galeria";
 import Main from "./components/Main";
 import Modalidades from "./components/Modalidades";
+import Patrocinadores from "./components/Patrocinadores";
 import Slide from "./components/Slide";
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
       <Slide />
       <Galeria />
       <Contato />
+      <Patrocinadores />
     </div>
   );
 };
