@@ -1,16 +1,15 @@
-import { BrowserRouter, Route, Routes } from "react-router";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
+import IrAoTopo from "./components/IrAoTopo";
 import Home from "./Home";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/Mova" element={<Home />} />
-        </Routes>
-      </BrowserRouter>
+      <Header />
+      <Home />
+      <IrAoTopo />
+      <Footer />
     </>
   );
 }

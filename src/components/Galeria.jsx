@@ -42,7 +42,7 @@ const Galeria = () => {
   }
 
   return (
-    <section className=" relative">
+    <section id="galeria" className=" relative">
       <h2 className="capitalize mb-8 mx-auto text-center max-w-3xl text-white text-4xl sm:text-6xl text-balance font-serif">
         Explore nossa Galeria
       </h2>

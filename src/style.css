@@ -19,6 +19,7 @@
   --animate-slide-in: slideIn 0.4s ease-in-out forwards;
   --animate-fade-in: fadeIn 0.4s ease-in-out forwards;
   --animate-rolarTexto: rolarTexto 20s linear infinite;
+  --animate-rolarTexto-mobile: rolarTexto 12s linear infinite;
   @keyframes rolarTexto {
     from {
       transform: translateX(0);
@@ -82,7 +83,7 @@
       inset 0px -1px 2px var(--color-roxo-400);
   }
   .btn {
-    @apply rounded-full border border-roxo-neon bg-linear-to-b from-roxo-neon to-roxo-500 px-5 py-2 text-roxo-200 transition hover:contrast-150;
+    @apply rounded-full cursor-pointer border border-roxo-neon bg-linear-to-b from-roxo-neon to-roxo-500 px-5 py-2 text-roxo-200 transition hover:contrast-150;
     box-shadow:
       0 1px 4px 1px rgba(var(--color-roxo-800), 0.25),
       inset 0px -1px 2px var(--color-roxo-800);
