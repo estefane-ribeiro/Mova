@@ -9,6 +9,7 @@ const Slide = () => {
   const [slideIndex, setSlideIndex] = useState(0);
   const [previousIndex, setPreviousIndex] = useState(null);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [ativo, setAtivo] = useState(true);
 
   function changeSlide(index) {
     if (index === slideIndex || isTransitioning) return;
@@ -21,6 +22,12 @@ const Slide = () => {
       setPreviousIndex(null);
       setIsTransitioning(false);
     }, 800);
+  }
+
+  function toggleVideo({ target }) {
+    console.log(ativo);
+    setAtivo((anterior) => !anterior);
+    target.autoPlay = ativo;
   }
 
   function slideGo({ target }) {
@@ -86,6 +93,7 @@ const Slide = () => {
           <video
             key={slideIndex}
             src={slide[slideIndex]}
+            onClick={toggleVideo}
             muted
             loop
             playsInline
