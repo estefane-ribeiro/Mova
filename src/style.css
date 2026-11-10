@@ -75,6 +75,10 @@
   animation-delay: 400ms;
 }
 
+@utility animate-5 {
+  animation-delay: 500ms;
+}
+
 @layer components {
   .neon {
     @apply rounded-full border border-roxo-400 bg-linear-to-b from-roxo-400 to-roxo-neon;
@@ -90,6 +94,9 @@
   }
   .input {
     @apply rounded-md border-2 border-roxo-800 bg-roxo-800 p-2 text-white focus:outline-none focus:ring-2 focus:ring-roxo-400 focus:border-roxo-900 placeholder:text-roxo-900;
+  }
+  .select {
+    @apply rounded-lg border-3 border-roxo-neon  p-2 text-white focus:outline-none focus:ring-2 focus:ring-roxo-400 focus:border-roxo-neon hover:bg-roxo-700;
   }
   .radial-gradient {
     @apply bg-radial-[50%_100%_at_50%_0%] from-roxo-500 to-roxo-800;

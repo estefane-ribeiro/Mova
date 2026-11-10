@@ -2,6 +2,7 @@ import v1 from "../assets/danca_moderna.mp4";
 import v2 from "../assets/bale.mp4";
 import v3 from "../assets/valsa.mp4";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const slide = [v1, v2, v3];
 
@@ -10,6 +11,7 @@ const Slide = () => {
   const [previousIndex, setPreviousIndex] = useState(null);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [ativo, setAtivo] = useState(true);
+  const [t] = useTranslation();
 
   function changeSlide(index) {
     if (index === slideIndex || isTransitioning) return;
@@ -49,10 +51,10 @@ const Slide = () => {
     <section className="container mb-12 sm:mb-16 grid lg:grid-cols-2 gap-2 lg:gap-8">
       <div className="bg-roxo-900 p-6 sm:p-8 rounded-xl self-center">
         <p className="mb-4 text-roxo-200 uppercase tracking-widest text-sm">
-          Experiências Exclusivas
+          {t("sli-p1")}
         </p>
         <h2 className="mb-8 font-serif text-balance lg:w-[70%] text-white text-3xl sm:text-4xl capitalize lg:text-5xl">
-          Escolha sua próxima aventura
+          {t("sli-titulo")}
         </h2>
       </div>
       <div className="relative grid overflow-x-hidden lg:-ml-42">

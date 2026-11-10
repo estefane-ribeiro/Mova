@@ -2,8 +2,11 @@ import danca1 from "../assets/dan4.avif";
 import danca2 from "../assets/dan2.avif";
 import danca3 from "../assets/dan3.avif";
 import fundo from "../assets/padrao.svg";
+import { useTranslation } from "react-i18next";
 
 const Modalidades = () => {
+  const [t] = useTranslation();
+
   return (
     <section
       id="modalidades"
@@ -14,28 +17,28 @@ const Modalidades = () => {
         className={`content-end bg-no-repeat bg-contain bg-bottom-left`}
       >
         <h2 className="text-white mb-8 text-4xl font-serif lg:text-5xl">
-          Encontre seu movimento
+          {t("titulo1")}
         </h2>
         <ul className="text-gray-200 *:flex *:items-center *:gap-4 grid gap-4 sm:text-xl">
           <li>
-            <span className="h-0.5 w-6 neon inline-block"></span>Experimente
-            diferentes modalidades de danças
+            <span className="h-0.5 w-6 neon inline-block"></span>
+            {t("li1")}
           </li>
           <li>
-            <span className="h-0.5 w-6 neon inline-block"></span>Conecte-se com
-            você
+            <span className="h-0.5 w-6 neon inline-block"></span>
+            {t("li2")}
           </li>
           <li>
-            <span className="h-0.5 w-6 neon inline-block"></span>Desconecte-se
-            do digital
+            <span className="h-0.5 w-6 neon inline-block"></span>
+            {t("li3")}
           </li>
           <li>
-            <span className="h-0.5 w-6 neon inline-block"></span>Observe os
-            movimentos
+            <span className="h-0.5 w-6 neon inline-block"></span>
+            {t("li4")}
           </li>
           <li>
-            <span className="h-0.5 w-6 neon inline-block"></span>Escolha a sua
-            modalidade preferida
+            <span className="h-0.5 w-6 neon inline-block"></span>
+            {t("li5")}
           </li>
         </ul>
       </div>
@@ -51,7 +54,7 @@ const Modalidades = () => {
           </div>
 
           <span className="m-2 z-20 self-start justify-self-end uppercase text-white rounded-full bg-verde-950/60 px-4 py-2 text-sm/none">
-            Dança Moderna
+            {t("span1")}
           </span>
         </div>
         <div className="group grid *:col-start-1 *:row-start-1">
@@ -64,7 +67,7 @@ const Modalidades = () => {
           </div>
 
           <span className="m-2 z-20 self-start justify-self-end uppercase text-white rounded-full bg-verde-950/60 px-4 py-2 text-sm/none">
-            Clássica
+            {t("span2")}
           </span>
         </div>
         <div className="grid *:col-start-1 *:row-start-1">
@@ -76,7 +79,7 @@ const Modalidades = () => {
             />
           </div>
           <span className="m-2 z-20 self-start justify-self-end uppercase text-white rounded-full bg-verde-950/60 px-4 py-2 text-sm/none">
-            Balé
+            {t("span3")}
           </span>
         </div>
       </div>
