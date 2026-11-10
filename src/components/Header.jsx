@@ -1,7 +1,11 @@
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
+import Idiomas from "./Idiomas";
 
 const Header = () => {
   const ref = useRef(null);
+  const [t] = useTranslation();
+
   function handleClickButton() {
     if (!ref.current) return;
     ref.current.classList.remove("hidden");
@@ -17,7 +21,9 @@ const Header = () => {
       id="header"
       className="flex justify-between items-center py-6 px-2 sm:p-6"
     >
-      <h1 className="text-4xl text-white font-serif font-extrabold">MOVA</h1>
+      <h1 className="text-4xl text-white uppercase font-serif font-extrabold">
+        {t("logo")}
+      </h1>
       <nav
         ref={ref}
         onClick={handleClickMenuMobile}
@@ -31,7 +37,7 @@ const Header = () => {
               href="#modalidades"
               className="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 group"
             >
-              Modalidades
+              {t("modalidades")}
               <span className="opacity-0 h-0.5 w-2 block bg-roxo-100 lg:group-hover:w-full lg:group-hover:opacity-100 "></span>
             </a>
           </li>
@@ -40,7 +46,7 @@ const Header = () => {
               href="#experiencias"
               className="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 group "
             >
-              Experiências
+              {t("experiencias")}
               <span className="opacity-0 h-0.5 w-2 block bg-roxo-100 lg:group-hover:w-full lg:group-hover:opacity-100 "></span>
             </a>
           </li>
@@ -49,7 +55,7 @@ const Header = () => {
               href="#galeria"
               className="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 group"
             >
-              Galeria
+              {t("galeria")}
               <span className="opacity-0 h-0.5 w-2 block bg-roxo-100 lg:group-hover:w-full lg:group-hover:opacity-100  "></span>
             </a>
           </li>
@@ -58,9 +64,12 @@ const Header = () => {
               href="#contato"
               className="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 group"
             >
-              Contato
+              {t("contato")}
               <span className="opacity-0 h-0.5 w-2 block bg-roxo-100 lg:group-hover:w-full lg:group-hover:opacity-100  "></span>
             </a>
+          </li>
+          <li className="animate-slide-in opacity-0 animate-5">
+            <Idiomas />
           </li>
         </ul>
       </nav>
@@ -69,7 +78,7 @@ const Header = () => {
         id="mobile-button"
         className="flex items-center gap-3 btn text-roxo-200 font-semibold px-4 py-2 cursor-pointer lg:hidden"
       >
-        Menu ☰
+        {t("menu")} ☰
       </button>
     </header>
   );

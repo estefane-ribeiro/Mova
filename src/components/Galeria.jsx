@@ -12,6 +12,7 @@ import bale2 from "../assets/bale_dan.avif";
 import valsa from "../assets/vals.avif";
 import { useState } from "react";
 import Modal from "./Modal";
+import { useTranslation } from "react-i18next";
 
 const galeria = [
   { id: 0, img: solo, row: 1, col: 1, legenda: "Solo" },
@@ -31,6 +32,7 @@ const galeria = [
 const Galeria = () => {
   const [modal, setModal] = useState(false);
   const [fotoIndex, setFotoIndex] = useState(0);
+  const [t] = useTranslation();
 
   function handleClick(index) {
     setFotoIndex(Number(index));
@@ -44,7 +46,7 @@ const Galeria = () => {
   return (
     <section id="galeria" className=" relative">
       <h2 className="capitalize mb-8 mx-auto text-center max-w-3xl text-white text-4xl sm:text-6xl text-balance font-serif">
-        Explore nossa Galeria
+        {t("gal-titulo")}
       </h2>
       <div className="container grid grid-cols-2 lg:grid-cols-4 gap-4">
         {galeria.map((foto) => (
