@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-const Idiomas = () => {
+const Idiomas = ({ ref }) => {
   const { i18n } = useTranslation();
 
   function handleChangeLanguage(event) {
@@ -12,6 +12,7 @@ const Idiomas = () => {
   }
   return (
     <select
+      ref={ref}
       className="p-4 lg:px-0 lg:py-2 select *:bg-roxo-800 "
       value={i18n.resolvedLanguage?.split("-")[0] || "pt"}
       onChange={handleChangeLanguage}

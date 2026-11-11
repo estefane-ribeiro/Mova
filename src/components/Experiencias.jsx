@@ -5,6 +5,13 @@ import { useTranslation } from "react-i18next";
 
 const Experiencias = () => {
   const [t] = useTranslation();
+
+  function handleClick({ target }) {
+    if (target.classList.contains("rotate-3"))
+      target.classList.remove("rotate-3");
+    else target.classList.add("rotate-3");
+  }
+
   return (
     <section
       id="experiencias"
@@ -45,6 +52,7 @@ const Experiencias = () => {
                 className="size-full rounded-2xl grayscale rotate-3 transition-all duration-300 hover:grayscale-0 hover:rotate-0"
                 src={dancaModerna}
                 alt=""
+                onClick={handleClick}
               />
             </div>
             <a
@@ -84,6 +92,7 @@ const Experiencias = () => {
                 className="size-full rounded-2xl grayscale transition-all rotate-3 duration-300 hover:grayscale-0 hover:rotate-0 object-cover"
                 src={bale}
                 alt=""
+                onClick={handleClick}
               />
             </div>
             <a
@@ -120,6 +129,7 @@ const Experiencias = () => {
                 className="size-full rounded-2xl grayscale transition-all -rotate-3 duration-300 hover:grayscale-0 hover:rotate-0"
                 src={valsa}
                 alt=""
+                onClick={({ target }) => target.classList.toggle("-rotate-3")}
               />
             </div>
             <a

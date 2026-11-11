@@ -19,7 +19,7 @@ const Main = () => {
           height="720"
           src={video}
         ></video>
-        <div className="bg-roxo-900/50 sm:bg-roxo-900 flex flex-col sm:flex-row gap-2 p-4 sm:inline-flex items-start sm:items-center mb-8 sm:gap-8 sm:py-1 sm:pl-4 sm:pr-1 rounded-xl sm:rounded-full z-20 w-1/2">
+        <div className="bg-roxo-900/50 sm:bg-roxo-900 inline-flex flex-col sm:flex-row gap-2 p-4 sm:inline-flex items-start sm:items-center mb-8 sm:gap-8 sm:py-1 sm:pl-4 sm:pr-1 rounded-xl sm:rounded-full z-20">
           {t("p1")}
           <a className="btn inline-flex items-center gap-2" href="#contato">
             {t("btnReservar")} ➔

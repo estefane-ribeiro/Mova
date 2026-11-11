@@ -1,9 +1,11 @@
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import Idiomas from "./Idiomas";
+import { BringToFront, Image, PhoneLog, PlayingCardsFan } from "lucide-react";
 
 const Header = () => {
   const ref = useRef(null);
+  const selectRef = useRef(null);
   const [t] = useTranslation();
 
   function handleClickButton() {
@@ -12,9 +14,11 @@ const Header = () => {
     ref.current.classList.add("flex");
   }
 
-  function handleClickMenuMobile() {
-    ref.current.classList.remove("flex");
-    ref.current.classList.add("hidden");
+  function handleClickMenuMobile({ target }) {
+    if (target !== selectRef.current) {
+      ref.current.classList.remove("flex");
+      ref.current.classList.add("hidden");
+    }
   }
   return (
     <header
@@ -37,7 +41,10 @@ const Header = () => {
               href="#modalidades"
               className="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 group"
             >
-              {t("modalidades")}
+              <div className="flex items-center gap-1">
+                <BringToFront />
+                {t("modalidades")}
+              </div>
               <span className="opacity-0 h-0.5 w-2 block bg-roxo-100 lg:group-hover:w-full lg:group-hover:opacity-100 "></span>
             </a>
           </li>
@@ -46,7 +53,10 @@ const Header = () => {
               href="#experiencias"
               className="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 group "
             >
-              {t("experiencias")}
+              <div className="flex items-center gap-1">
+                <PlayingCardsFan />
+                {t("experiencias")}
+              </div>
               <span className="opacity-0 h-0.5 w-2 block bg-roxo-100 lg:group-hover:w-full lg:group-hover:opacity-100 "></span>
             </a>
           </li>
@@ -55,7 +65,11 @@ const Header = () => {
               href="#galeria"
               className="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 group"
             >
-              {t("galeria")}
+              <div className="flex items-center gap-1">
+                <Image />
+                {t("galeria")}
+              </div>
+
               <span className="opacity-0 h-0.5 w-2 block bg-roxo-100 lg:group-hover:w-full lg:group-hover:opacity-100  "></span>
             </a>
           </li>
@@ -64,12 +78,15 @@ const Header = () => {
               href="#contato"
               className="p-4 lg:px-0 lg:py-2 block max-lg:hover:bg-white/10 group"
             >
-              {t("contato")}
+              <div className="flex items-center gap-1">
+                <PhoneLog />
+                {t("contato")}
+              </div>
               <span className="opacity-0 h-0.5 w-2 block bg-roxo-100 lg:group-hover:w-full lg:group-hover:opacity-100  "></span>
             </a>
           </li>
           <li className="animate-slide-in opacity-0 animate-5">
-            <Idiomas />
+            <Idiomas ref={selectRef} />
           </li>
         </ul>
       </nav>
