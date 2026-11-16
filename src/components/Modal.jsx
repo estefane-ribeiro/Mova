@@ -1,6 +1,9 @@
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useRef } from "react";
+
 const Modal = ({ galeria, index, setModal, setFotoIndex, ...props }) => {
   function handleClick(event) {
-    if (event.target.tagName !== "IMG" && event.target.tagName !== "BUTTON")
+    if (event.target.tagName !== "IMG" && !event.target.closest("button"))
       setModal(false);
   }
 
@@ -12,6 +15,27 @@ const Modal = ({ galeria, index, setModal, setFotoIndex, ...props }) => {
   function goLeft() {
     if (index > 0) setFotoIndex(index - 1);
     return;
+  }
+
+  const startX = useRef(0);
+
+  function handlePointerDown(event) {
+    startX.current = event.clientX;
+  }
+
+  function handlePointerUp(event) {
+    const difference = event.clientX - startX.current;
+
+    // Evita movimentos muito pequenos
+    if (Math.abs(difference) < 50) return;
+
+    if (difference < 0 && index < galeria.length - 1) {
+      setFotoIndex(index + 1);
+    }
+
+    if (difference > 0 && index > 0) {
+      setFotoIndex(index - 1);
+    }
   }
 
   return (
@@ -29,7 +53,9 @@ const Modal = ({ galeria, index, setModal, setFotoIndex, ...props }) => {
           </button>
         </div>
         <img
-          className="object-cover max-h-[90%] rounded-xl transition-all"
+          onPointerDown={handlePointerDown}
+          onPointerUp={handlePointerUp}
+          className="object-cover max-h-[90%] rounded-xl transition-all cursor-grab active:cursor-grabbing select-none touch-pan-y"
           src={galeria[index].img}
           alt={galeria[index].legenda}
         />
@@ -41,7 +67,7 @@ const Modal = ({ galeria, index, setModal, setFotoIndex, ...props }) => {
             className="max-sm:text-3xl text-5xl font-bold text-roxo-neon max-sm:left-1 left-5 lg:left-10 not-disabled:hover:contrast-150 disabled:cursor-no-drop disabled:text-gray-400"
             disabled={index == 0}
           >
-            {"ᐊ"}
+            <ChevronLeft className="size-15" />
           </button>
         )}
         {index < galeria.length - 1 && (
@@ -49,7 +75,7 @@ const Modal = ({ galeria, index, setModal, setFotoIndex, ...props }) => {
             onClick={goRight}
             className="max-sm:text-3xl text-5xl font-bold text-roxo-neon max-sm:right-1 right-5 lg:right-10 not-disabled:hover:contrast-200 disabled:cursor-no-drop disabled:text-gray-400"
           >
-            {"ᐅ"}
+            <ChevronRight className="size-15" />
           </button>
         )}
       </nav>

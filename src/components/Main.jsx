@@ -1,8 +1,11 @@
 import video from "../assets/video.mp4";
 import opera from "../assets/opera.png";
 import { useTranslation } from "react-i18next";
+import Loading from "./Loading";
+import { useState } from "react";
 
 const Main = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [t] = useTranslation();
 
   return (
@@ -12,6 +15,10 @@ const Main = () => {
           id="video"
           className="absolute inset-0 -z-10 size-full object-cover animate-fade-in"
           muted
+          onLoadStart={() => setIsLoading(true)}
+          onCanPlay={() => setIsLoading(false)}
+          onPlaying={() => setIsLoading(false)}
+          onError={() => setIsLoading(false)}
           playsInline
           autoPlay
           loop
@@ -19,6 +26,11 @@ const Main = () => {
           height="720"
           src={video}
         ></video>
+        {isLoading && (
+          <div className="absolute inset-0 z-20 flex items-center justify-center bg-roxo-900">
+            <Loading />
+          </div>
+        )}
         <div className="bg-roxo-900/50 sm:bg-roxo-900 inline-flex flex-col sm:flex-row gap-2 p-4 sm:inline-flex items-start sm:items-center mb-8 sm:gap-8 sm:py-1 sm:pl-4 sm:pr-1 rounded-xl sm:rounded-full z-20">
           {t("p1")}
           <a className="btn inline-flex items-center gap-2" href="#contato">

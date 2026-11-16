@@ -143,9 +143,7 @@ const Slide = () => {
             onClick={toggleVideo}
             onLoadStart={() => setIsLoading(true)}
             onCanPlay={() => setIsLoading(false)}
-            onWaiting={() => setIsLoading(true)}
             onPlaying={() => setIsLoading(false)}
-            onError={() => setIsLoading(false)}
             muted
             loop
             playsInline

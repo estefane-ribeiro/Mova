@@ -1,16 +1,71 @@
-# React + Vite
+# 💃 MOVA — Studio de Dança
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page desenvolvida para um estúdio de dança fictício, com o objetivo de praticar e aprimorar conhecimentos em **React** e **Tailwind CSS**.
 
-Currently, two official plugins are available:
+O projeto foi desenvolvido após a conclusão do curso de Tailwind CSS da Origamid, colocando em prática os conceitos estudados durante as aulas, com foco na construção de interfaces modernas, criativas e responsivas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Sobre o projeto
 
-## React Compiler
+O MOVA é uma landing page conceitual para um estúdio de dança, criada para apresentar sua identidade visual, modalidades de dança e proposta artística.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O desenvolvimento teve como foco a construção da interface, explorando recursos de estilização do Tailwind CSS e a componentização com React.
 
-## Expanding the ESLint configuration
+## 🚀 Tecnologias utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** — construção da interface e componentização.
+- **Tailwind CSS** — estilização e criação do layout.
+- **JavaScript** — lógica e interatividade da interface.
+- **Vite** — ferramenta de desenvolvimento e build.
+
+## 🖥️ Demonstração
+
+Acesse o projeto publicado:
+
+[MOVA — Studio de Dança](https://estefane-ribeiro.github.io/Mova/)
+
+## 📸 Preview
+
+![alt text](image.png)
+
+## ⚙️ Como executar o projeto
+
+1. Clone este repositório:
+
+   ```bash
+   git clone https://github.com/estefane-ribeiro/Mova.git
+   ```
+
+2. Acesse a pasta do projeto:
+
+   ```bash
+   cd Mova
+   ```
+
+3. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+4. Inicie o servidor de desenvolvimento:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Acesse o endereço disponibilizado pelo Vite no terminal.
+
+## 🎯 Objetivo de aprendizado
+
+Este projeto foi desenvolvido como exercício prático após o curso de Tailwind CSS da Origamid, com o propósito de consolidar conhecimentos em:
+
+- Desenvolvimento de interfaces com React.
+- Estilização utilizando Tailwind CSS.
+- Organização e reutilização de componentes.
+- Construção de layouts e interfaces responsivas.
+
+## 👩‍💻 Autoria
+
+Desenvolvido por **Estefane Ribeiro**.
+
+[GitHub](https://github.com/estefane-ribeiro)
